@@ -1,0 +1,81 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData":
+    {
+        "icon": "images/icon.png",
+        "iconSmall": "images/iconSmall.png",
+        "category": "Custom"
+    },
+
+    "type": "REST",
+    "lang":
+    {
+        "en-US":
+        {
+            "name": "Login Form",
+            "description": "Add your Username and Password",
+            "step1Label": "Configure Activity"
+        }
+    },
+    "arguments":
+    {
+        "execute":
+        {
+            "inArguments": [],
+            "outArguments": [],
+            "url": "<HTTPS_URL_OF_APP>/public/execute",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
+        }
+    },
+    
+    "configurationArguments":
+    {
+        "applicationExtensionKey": "<APP EXTENSION KEY>",
+        "save":
+        {
+            "url": "<HTTPS_URL_OF_APP>/public/save",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "publish":
+        {
+            "url": "<HTTPS_URL_OF_APP>/public/publish",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "stop":
+        {
+            "url": "<HTTPS_URL_OF_APP>/public/stop",
+            "verb": "POST",
+            "useJwt": true
+        },
+        "validate":
+        {
+            "url": "<HTTPS_URL_OF_APP>/public/validate",
+            "verb": "POST",
+            "useJwt": true
+        }
+    },
+    "userInterfaces":
+    {
+        "configModal": {
+            "height": 700,
+            "width": 1000,
+            "fullscreen": false
+        }
+    },
+    "schema": 
+    {
+        "arguments":{
+            "execute": {
+                "inArguments": [],
+                "outArguments": []
+            }
+        }
+    }
+}

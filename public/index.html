@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USERNAME AND PASSWORD FORM</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+    <link rel='stylesheet' href="css/styles.css">
+    <script type="text/javascript" src="js/postmonger.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>	
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript">
+        (function() {
+            var config = {
+                baseUrl: 'js'
+            };
+            var dependencies = [
+                'customActivity'
+            ];
+            require(config, dependencies);
+        })();
+    </script>
+</head>
+
+
+<body>
+   <form id="form">
+      <input type="text" id="username" name="username" />
+
+      <br />
+      <br />
+
+      <input
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="on"
+      />
+
+      <br />
+      <br />
+
+      <button type="submit" id="submit-btn">Log in</button>
+    </form>
+</body>
+
+</html>
