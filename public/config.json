@@ -38,25 +38,25 @@
         "applicationExtensionKey": "63586e6d-936c-404a-9018-1885ad0e51f0",
         "save":
         {
-            "url": "https://username-form.vercel.app/",
+            "url": "https://username-form.vercel.app/save",
             "verb": "POST",
             "useJwt": true
         },
         "publish":
         {
-            "url": "https://username-form.vercel.app/",
+            "url": "https://username-form.vercel.app/publish",
             "verb": "POST",
             "useJwt": true
         },
         "stop":
         {
-            "url": "https://username-form.vercel.app/",
+            "url": "https://username-form.vercel.app/stop",
             "verb": "POST",
             "useJwt": true
         },
         "validate":
         {
-            "url": "https://username-form.vercel.app/",
+            "url": "https://username-form.vercel.app/validate",
             "verb": "POST",
             "useJwt": true
         }
