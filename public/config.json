@@ -23,7 +23,7 @@
         {
             "inArguments": [],
             "outArguments": [],
-            "url": "https://username-form.vercel.app/public/execute",
+            "url": "https://username-form.vercel.app/",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -38,25 +38,25 @@
         "applicationExtensionKey": "63586e6d-936c-404a-9018-1885ad0e51f0",
         "save":
         {
-            "url": "https://username-form.vercel.app/public/save",
+            "url": "https://username-form.vercel.app/",
             "verb": "POST",
             "useJwt": true
         },
         "publish":
         {
-            "url": "https://username-form.vercel.app/public/publish",
+            "url": "https://username-form.vercel.app/",
             "verb": "POST",
             "useJwt": true
         },
         "stop":
         {
-            "url": "https://username-form.vercel.app/public/stop",
+            "url": "https://username-form.vercel.app/",
             "verb": "POST",
             "useJwt": true
         },
         "validate":
         {
-            "url": "https://username-form.vercel.app/public/validate",
+            "url": "https://username-form.vercel.app/",
             "verb": "POST",
             "useJwt": true
         }
