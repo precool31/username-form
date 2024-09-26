@@ -52,6 +52,10 @@ define(['postmonger'], function (Postmonger) {
     username : {{Contact.Attribute.Test_push.Username}},
     password : {{Contact.Attribute.Test_push.Password}}
   };
+        
+        payload['arguments'].execute.inArguments = [params];
+        payload['metaData'].isConfigured = true;
+
         fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
   body: JSON.stringify(params),
@@ -62,8 +66,6 @@ define(['postmonger'], function (Postmonger) {
   .then((response) => response.json())
   .then((json) => console.log(json));
        
-        payload['arguments'].execute.inArguments = [params];
-        payload['metaData'].isConfigured = true;
         connection.trigger('updateActivity', payload);
 
         
