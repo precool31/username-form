@@ -49,8 +49,9 @@ define(['postmonger'], function (Postmonger) {
      */
     function save() {
         let params = {
-	{"username":"{{Contact.Attribute.Test_push.Username}}"},
-	{"password":"{{Contact.Attribute.Test_push.Password}}"}
+	"username": "{{Contact.Attribute.Test_push.username}}",
+	"password":"{{Contact.Attribute.Test_push.password}}"
+		
   };
         
         payload['arguments'].execute.inArguments = [params];
