@@ -9,7 +9,9 @@ define(['postmonger'], function (Postmonger) {
     let eventSchema = ''; // variable is used in parseEventSchema()
     let lastnameSchema = ''; // variable is used in parseEventSchema()
     let eventDefinitionKey;
-
+    let username;
+    let password;
+    
     $(window).ready(onRender);
     connection.on('initActivity', initialize);
     connection.on('clickedNext', save); //Save function within MC
@@ -47,8 +49,8 @@ define(['postmonger'], function (Postmonger) {
      */
     function save() {
         let params = {
-    username : '{{Event.' + eventDefinitionKey + '.Username}}',
-    password : '{{Event.' + eventDefinitionKey + '.Password}}',
+    username : {{Contact.Attribute.Test_push.Username}},
+    password : {{Contact.Attribute.Test_push.Password}}
   };
         fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
