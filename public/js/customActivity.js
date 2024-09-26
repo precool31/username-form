@@ -28,7 +28,7 @@ define(['postmonger'], function (Postmonger) {
     connection.trigger('requestTriggerEventDefinition');
     connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
         if (eventDefinitionModel) {
-            eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+            let eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
             // console.log('Request Trigger >>>', JSON.stringify(eventDefinitionModel));
         }
     });
@@ -46,29 +46,25 @@ define(['postmonger'], function (Postmonger) {
      * The config.json will be updated here if there are any updates to be done via Front End UI
      */
     function save() {
-        var username = document.getElementById('username').value;
-        var pass = document.getElementById('password').value;
-        payload['arguments'].execute.inArguments = [
-            {
-                ID : username,
-                PASSWORD : pass
-            }
-        ];
-        payload['metaData'].isConfigured = true;
-        connection.trigger('updateActivity', payload);
-
+        let params = {
+    username : '{{Event.' + eventDefinitionKey + '.Username}}',
+    password : '{{Event.' + eventDefinitionKey + '.Password}}',
+  };
         fetch('https://jsonplaceholder.typicode.com/posts', {
   method: 'POST',
-  body: JSON.stringify({
-    ID : username,
-    PASSWORD : pass
-  }),
+  body: JSON.stringify(params),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
   },
 })
   .then((response) => response.json())
   .then((json) => console.log(json));
+       
+        payload['arguments'].execute.inArguments = [params];
+        payload['metaData'].isConfigured = true;
+        connection.trigger('updateActivity', payload);
+
+        
     }
 
     /**
