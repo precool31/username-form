@@ -23,7 +23,7 @@
         {
             "inArguments": [],
             "outArguments": [],
-            "url": "https://username-form.vercel.app/",
+            "url": "https://username-form.vercel.app/execute",
             "verb": "POST",
             "body": "",
             "header": "",
